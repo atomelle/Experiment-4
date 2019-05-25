@@ -1,0 +1,65 @@
+#include<iostream>
+
+using namespace std;
+
+void menu()
+{
+	int x,num, num2;
+	float result;
+	char con = 'y'; 
+
+	cout<<"==================================================="<< endl;
+	cout << "                      MENU:                  " << endl;
+	cout << "\t1. Add" << endl;
+	cout << "\t2. Subtract" << endl;
+	cout << "\t3. Multiply" << endl;
+	cout << "\t4. Divide" << endl;
+	cout << "\t5. Modulus" << endl;
+	cout<<"==================================================="<< endl; 
+	
+	do
+	{
+		cout << "Input choice: "; cin >> x;
+		cout << "Input two numbers: "; cin >> num >> num2;
+		
+		switch(x)
+		{
+			case 1: 
+				result = num + num2;
+				break;
+				
+			case 2: 
+				result = num - num2;
+				break;
+				
+			case 3: 
+				result = num  * num2;
+				break;
+				
+			case 4: 
+				result = num / num2;
+				break;
+				
+			case 5: 
+				result = num % num2;
+				break;
+				
+			default: 
+			cout << "Input is invalid";
+		}
+		
+		cout <<"Result: " << result << endl;
+		cout << " Continue? (Input y to continue)"; 
+        cin >> con; 
+    
+	}while(con=='y'|| con=='Y'); 
+    
+	 system("PAUSE"); 
+    
+}
+	
+
+int main()
+{
+	menu();
+}
