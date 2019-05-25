@@ -1,0 +1,42 @@
+#include<iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	
+	int size,temp;
+	int num[size];
+
+	
+	cout << "Selection Sorting...." << endl;
+	cout << "Enter the array size: "; cin >> size;
+	cout << "Enter the "<< size <<" elements: ";
+	
+	for(int i=0; i<size; i++)
+	{
+		cin>>num[i];
+	}
+	
+	for(int i=0; i<size-1; i++)
+	{
+		for(int j= i+1; j<size; j++)
+		{
+			if(num[i] > num[j])
+			{
+				temp = num[i];
+				num[i] = num[j];
+				num[j] = temp;
+			}
+		}
+	}
+	
+	for(int i=0; i<size; i++)
+	{
+		cout << num[i] <<" ";
+	}
+	
+	getch ();
+	return 0;
+}
